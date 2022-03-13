@@ -4,8 +4,10 @@ one:
   product_name: MyString
   price: 1
   description: MyString
-
+  user: one
 two:
   product_name: MyString
   price: 1
   description: MyString
+  user: one
+  

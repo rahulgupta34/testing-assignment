@@ -1,7 +1,10 @@
 require "test_helper"
 
+
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
+    sign_in users(:one)
     @product = products(:one)
   end
 
@@ -46,3 +49,4 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to products_url
   end
 end
+
