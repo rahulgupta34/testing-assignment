@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "Registrations", type: :request do
   describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+    it "sholud be true to run this " do
+      expect(true)
+    end
   end
 end
