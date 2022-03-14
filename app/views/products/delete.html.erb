@@ -1,0 +1,23 @@
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @products.each do |product| %>
+    <tr>
+      <th scope="row"><%= product.id %></th>
+      <td><%= product.product_name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.description %></td>
+        <td><%= button_to "Delete", product_path(product.id), method: :delete, class:"btn btn-success" %></td>
+    </tr>
+   <% end %>
+  </tbody>
+</table>
